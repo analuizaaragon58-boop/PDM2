@@ -13,7 +13,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_bright"
+        android:background="#927349"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:subtitle="Subtítulo"
@@ -28,13 +28,13 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Musica selecionada:A" />
+        android:text="Musica selecionada:" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Musica execução:B" />
+        android:text="Musica execução:" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -46,68 +46,83 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="#9BDCE6">
+                app:cardBackgroundColor="#9BDCE6"
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:id="@+id/imageView7"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/duquesa__2_" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="180dp"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="#9BDCE6">
+                app:cardBackgroundColor="#9BDCE6"
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/tashatracie" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="#9BDCE6">
+                app:cardBackgroundColor="#9BDCE6"
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/luanna" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="180dp"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="#9BDCE6">
+                app:cardBackgroundColor="#9BDCE6"
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/costaju" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="#9BDCE6">
+                app:cardBackgroundColor="#9BDCE6"
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/summer" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>
