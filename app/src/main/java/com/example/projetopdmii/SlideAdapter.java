@@ -14,6 +14,7 @@ public class SlideAdapter extends RecyclerView.Adapter<SlideHolder> {
     private ArrayList<Slide> lista;
 
     public SlideAdapter(ArrayList<Slide> lista){
+
         this.lista = lista;
     }
     @NonNull
@@ -27,6 +28,7 @@ public class SlideAdapter extends RecyclerView.Adapter<SlideHolder> {
     public void onBindViewHolder(@NonNull SlideHolder holder, int position) {
         holder.titulo.setText(lista.get(position).getNome());
         holder.imagem.setImageResource(lista.get(position).getImagem());
+        holder.texto.setText(lista.get(position).getTexto());
 
     }
 

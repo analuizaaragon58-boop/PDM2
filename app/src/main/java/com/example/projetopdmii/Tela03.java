@@ -27,11 +27,12 @@ public class Tela03 extends AppCompatActivity {
         });
         viewPager = findViewById(R.id.viewpager);
         lista = new ArrayList<Slide>();
-        lista.add(new Slide("Slide1",R.drawable.duquesa__2_));
-        lista.add(new Slide("Slide2",R.drawable.tashatracie));
-        lista.add(new Slide("Slide3",R.drawable.luanna));
-        lista.add(new Slide("Slide4",R.drawable.costaju));
-        lista.add(new Slide("Slide5",R.drawable.summer));
+        lista.add(new Slide("Duquesa",R.drawable.duquesa,"Duquesa é uma cantora e compositora brasileira que se destaca no rap nacional. Sua música mistura rap, trap e R&B, trazendo batidas marcantes e letras que falam principalmente sobre amor, relacionamentos, autoestima e experiências pessoais**.\n" + "\n" +
+                "Suas músicas têm uma identidade forte e moderna, destacando sua voz e sua forma de falar sobre sentimentos e situações do cotidiano.\n"));
+        lista.add(new Slide("Tasha & Tracie",R.drawable.tashatracie,"text02"));
+        lista.add(new Slide("MC Luanna",R.drawable.luanna,"texto3"));
+        lista.add(new Slide("Julia Costa",R.drawable.juliac,"texto4"));
+        lista.add(new Slide("Summer Walker",R.drawable.summer,"texto5"));
         SlideAdapter adapter = new SlideAdapter(lista);
         viewPager.setAdapter(adapter);
     }

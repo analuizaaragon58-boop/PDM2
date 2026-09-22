@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/duquesa__2_" />
+                    app:srcCompat="@drawable/duquesa" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -106,7 +106,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/costaju" />
+                    app:srcCompat="@drawable/juliac" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
