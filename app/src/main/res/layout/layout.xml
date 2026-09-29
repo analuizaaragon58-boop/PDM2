@@ -76,13 +76,4 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.05"
-        android:backgroundTint="#401509"
-        android:gravity="center"
-        android:text="Voltar"
-        android:textSize="24sp" />
 </LinearLayout>
