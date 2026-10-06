@@ -1,7 +1,5 @@
 package com.example.projetopdmii;
 
-import static com.example.projetopdmii.R.id.button6;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +24,7 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela03);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.idDrawer), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
