@@ -1,6 +1,7 @@
 package com.example.projetopdmii;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,16 +9,22 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
@@ -30,6 +37,9 @@ public class Tela02 extends AppCompatActivity implements MediaPlayer.OnCompletio
     private ArrayList<playlist> lista;
     private CardView card1,card2,card3,card4,card5;
     private TextView textoMusicaSeleciona, textoMusicaTocando;
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private ActionBarDrawerToggle toggle;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -42,11 +52,45 @@ public class Tela02 extends AppCompatActivity implements MediaPlayer.OnCompletio
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        drawerLayout = findViewById(R.id.idDrawer);
+        navigationView = findViewById(R.id.idNavigation);
+
         toolbar = findViewById(R.id.toolbar);
         //Atribui a toolbar o "poder" de ActionBar
         setSupportActionBar(toolbar);
         //Habilita o botão de voltar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        toggle = new ActionBarDrawerToggle(this,drawerLayout ,toolbar, R.string.open,R.string.close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                if (menuItem.getItemId() == R.id.idhome){
+                    drawerLayout.closeDrawers();
+                    startActivity(new Intent(Tela02.this, TelaHome.class));
+                    return true;
+
+                }
+                if (menuItem.getItemId() == R.id.idtela02){
+                    drawerLayout.closeDrawers();
+                    return true;
+
+                }
+                if (menuItem.getItemId() == R.id.idtela03){
+                    drawerLayout.closeDrawers();
+                    startActivity(new Intent(Tela02.this, Tela03.class));
+                    return true;
+
+
+                }
+                return false;
+            }
+        });
+
         seekBar = findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(this);
         handler = new Handler();
