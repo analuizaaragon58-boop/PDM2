@@ -2,6 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/idTelaQuiz"
+        android:title="Quiz" />
+    <item
         android:id="@+id/idhome"
         android:icon="@drawable/home_24px"
         android:title="Home" />

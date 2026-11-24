@@ -44,7 +44,7 @@ public class TelaHome extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.idhome){
                     drawerLayout.closeDrawers();
-                    startActivity(new Intent(TelaHome.this, Tela02.class));
+                    startActivity(new Intent(TelaHome.this, Tela03.class));
                     return false;
 
                 }
@@ -59,8 +59,12 @@ public class TelaHome extends AppCompatActivity {
 
 
                 }
+                if (menuItem.getItemId() == R.id.idTelaQuiz){
+                    drawerLayout.closeDrawers();
+                    startActivity(new Intent(TelaHome.this, TelaQuiz.class));
+                    return false;
 
-
+                }
                 return false;
             }
         });
